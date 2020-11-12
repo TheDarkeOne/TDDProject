@@ -5,15 +5,16 @@ namespace TDDProjectTests
 {
     public class Tests
     {
+        EulerProblem1 euler;
         [SetUp]
         public void Setup()
         {
+            euler = new EulerProblem1();
         }
 
         [Test]
         public void TestMultiple3Fizz()
         {
-            EulerProblem1 euler = new EulerProblem1();
             string fizz = euler.GenerateFizzBuzz(3);
             Assert.AreEqual("Fizz", fizz);
         }
@@ -21,7 +22,6 @@ namespace TDDProjectTests
         [Test]
         public void TestMultiple5Buzz()
         {
-            EulerProblem1 euler = new EulerProblem1();
             string buzz = euler.GenerateFizzBuzz(5);
             Assert.AreEqual("Buzz", buzz);
         }
@@ -29,7 +29,6 @@ namespace TDDProjectTests
         [Test]
         public void TestNotMultiple5or3Buzz()
         {
-            EulerProblem1 euler = new EulerProblem1();
             string buzz = euler.GenerateFizzBuzz(7);
             Assert.AreEqual("7", buzz);
         }
@@ -37,7 +36,6 @@ namespace TDDProjectTests
         [Test]
         public void TestMultiple5and3FizzBuzz()
         {
-            EulerProblem1 euler = new EulerProblem1();
             string fizzbuzz = euler.GenerateFizzBuzz(15);
             Assert.AreEqual("FizzBuzz", fizzbuzz);
         }
@@ -45,7 +43,6 @@ namespace TDDProjectTests
         [Test]
         public void TestMultiple5and3Sum10()
         {
-            EulerProblem1 euler = new EulerProblem1();
             int sum = euler.GenerateSum(10);
             Assert.AreEqual(23, sum);
         }
@@ -53,7 +50,6 @@ namespace TDDProjectTests
         [Test]
         public void TestMultiple5and3Sum1000()
         {
-            EulerProblem1 euler = new EulerProblem1();
             int sum = euler.GenerateSum(1000);
             Assert.AreEqual(233168, sum);
         }
