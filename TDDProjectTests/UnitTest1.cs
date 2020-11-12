@@ -27,6 +27,14 @@ namespace TDDProjectTests
         }
 
         [Test]
+        public void TestNotMultiple5or3Buzz()
+        {
+            EulerProblem1 euler = new EulerProblem1();
+            string buzz = euler.GenerateFizzBuzz(7);
+            Assert.AreEqual("7", buzz);
+        }
+
+        [Test]
         public void TestMultiple5and3FizzBuzz()
         {
             EulerProblem1 euler = new EulerProblem1();

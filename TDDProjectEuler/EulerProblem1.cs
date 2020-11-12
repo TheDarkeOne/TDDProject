@@ -8,19 +8,23 @@ namespace TDDProjectEuler
     {
         public string GenerateFizzBuzz(int number) 
         {
-            if (number % 3 == 0 && number % 5 == 0) 
+            string fizzbuzzstring = "";
+            
+            if (number % 3 == 0)
             {
-                return "FizzBuzz";
+                fizzbuzzstring += "Fizz";
             }
-            else if (number % 3 == 0)
+            if (number % 5 == 0)
             {
-                return "Fizz";
+                fizzbuzzstring += "Buzz";
             }
-            else if (number % 5 == 0)
+
+            if (fizzbuzzstring == "")
             {
-                return "Buzz";
+                fizzbuzzstring += number.ToString();
             }
-            return number.ToString();
+
+            return fizzbuzzstring;
         }
 
         public void PrintNumbers(int number) 
