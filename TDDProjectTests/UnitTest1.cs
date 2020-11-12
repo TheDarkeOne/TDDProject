@@ -33,5 +33,21 @@ namespace TDDProjectTests
             string fizzbuzz = euler.GenerateFizzBuzz(15);
             Assert.AreEqual("FizzBuzz", fizzbuzz);
         }
+
+        [Test]
+        public void TestMultiple5and3Sum10()
+        {
+            EulerProblem1 euler = new EulerProblem1();
+            int sum = euler.GenerateSum(10);
+            Assert.AreEqual(23, sum);
+        }
+
+        [Test]
+        public void TestMultiple5and3Sum1000()
+        {
+            EulerProblem1 euler = new EulerProblem1();
+            int sum = euler.GenerateSum(1000);
+            Assert.AreEqual(233168, sum);
+        }
     }
 }
